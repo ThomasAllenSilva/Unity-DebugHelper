@@ -17,6 +17,9 @@ After reading this, you may think that exceptions are evil, but they are not. In
 Take a look at this piece of code:
 
 
+<img width="407" alt="early return" src="https://github.com/user-attachments/assets/76bf73dd-a369-4ea0-b182-9f6fe2e8b28f" />
+
+
 This is the simplest example I could think of where Defensive Programming is used the wrong way. Why is it wrong? Well, think about the two possibilities here:
 
 1 - Player Rigidbody Is Not Null
@@ -65,6 +68,7 @@ This plugin also offers a more visual way of reading these asserts. When an asse
 
 This is great not only for programmers, but also for designers, QA, or anyone working on the project who might encounter a failed assertion. They can simply hit the 'Copy Error Message' button and, for example, create a new task to fix the bug that occurred. When the programmer works on this fix, they will already have the error message, the scene where it happened, and the stack trace. This speed up bug fixing a lot.
 
+<img width="918" alt="error message window" src="https://github.com/user-attachments/assets/c14dad8d-16ae-4904-be94-d15900c4f17d" />
 
 
 # How To Use
@@ -77,16 +81,24 @@ You can use the asserts anywhere you'd like. But if you want to take advantage o
 
 That's it. It should look something like this:
 
+
+<img width="827" alt="assertable" src="https://github.com/user-attachments/assets/15d9d4dd-4d01-4680-9db6-a53cbc891e48" />
+
+
 Almost every assertion method has a contextObject parameter. What is that? It’s used to highlight the object where the exception occurred. Imagine you have 50 enemies in your scene, and one assert fails inside the enemy script. How would you know which enemy failed? That’s the purpose of the contextObject. Once you click the error message, it will highlight the object in the hierarchy where the exception occurred.
 
 # Scripting Symbol
 
 Now that you have your object configured to be asserted, you must define the scripting symbol 'DEBUG_HELPER' in the project settings so that the methods get compiled:
 
+<img width="558" alt="symbol" src="https://github.com/user-attachments/assets/9ac1c583-4e47-4881-a2cc-61fe473486f1" />
+
 
 # Object Assertion Settings:
 
 These settings are used to define which assets should be asserted and where they're located
+
+<img width="560" alt="settings" src="https://github.com/user-attachments/assets/856f82c3-b243-4ea4-bc7c-a8e89d4894f3" />
 
 
 # Scene Assertion Runner:
@@ -96,6 +108,10 @@ This component is required in order to run your scene objects assertions.
 To create = Right Click in the hierarchy -> Debug -> Scene Assertion Runner
 
 With this component you can define Runtime Settings and also run common scene asserts when entering play mode.
+
+
+<img width="558" alt="assertion runner" src="https://github.com/user-attachments/assets/946ef57f-570f-4121-a1c3-a33bfe273f3c" />
+
 
 That's pretty much it. It's very easy to use and implement in your project. You can also implement this interface and run assertions in POCOs.
 

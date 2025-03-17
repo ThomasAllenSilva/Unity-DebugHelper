@@ -61,6 +61,9 @@ If you want to assert scene objects, you can do that as well. This component run
 
 Let’s take a look at how our jump method would look using asserts:
 
+<img width="811" alt="jump with asserts" src="https://github.com/user-attachments/assets/d3ad0054-7d82-4fc6-951f-6a8e83fe23dd" />
+
+
 Here, we are not only checking if it’s null, but we’re also providing documentation to the code. Anyone who joins the project will see this assertion, the error message, and will understand for sure that the Jump method can’t be executed without a valid Rigidbody reference. Again, this is a simple example, but the same idea can be applied to anything, your custom components, AI, systems inside your game, etc.
 
 
@@ -86,6 +89,10 @@ That's it. It should look something like this:
 
 
 Almost every assertion method has a contextObject parameter. What is that? It’s used to highlight the object where the exception occurred. Imagine you have 50 enemies in your scene, and one assert fails inside the enemy script. How would you know which enemy failed? That’s the purpose of the contextObject. Once you click the error message, it will highlight the object in the hierarchy where the exception occurred.
+
+<img width="956" alt="console" src="https://github.com/user-attachments/assets/898770a3-0bac-4585-ad6c-890cce72e1b6" />
+
+
 
 # Scripting Symbol
 
